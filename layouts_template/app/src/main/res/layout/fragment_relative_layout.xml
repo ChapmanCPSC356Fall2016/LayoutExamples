@@ -4,11 +4,79 @@
              android:layout_height="match_parent"
              tools:context="edu.chapman.cpsc356.layouts.RelativeLayoutFragment">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/ll_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="Placeholder RelativeLayout"/>
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You were invited by Corey"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_top"
+        />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"/>
+
+
+    <RadioGroup
+        android:layout_above="@id/btn_create"
+        android:layout_below="@id/et_name"
+        android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"/>
+
+    </RadioGroup>
+
+
 
 </RelativeLayout>
